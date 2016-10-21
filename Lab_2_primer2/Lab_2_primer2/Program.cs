@@ -16,20 +16,29 @@ namespace Maximum
             int.TryParse(Console.ReadLine(), out a);
             int.TryParse(Console.ReadLine(), out b);
             //если больше А
-            if (a >= b)
+            if (int.TryParse(Console.ReadLine(), out a))
             {
-                Max = a;
-            }
-
-            //если больше B
-            else
-            {
-                Max = b;
-            };
+                int.TryParse(Console.ReadLine(), out b);
+                //максимальное значение
+                int max;
+                if (a >= b)
+                {
+                    Max = a;
+                }
+                //иначе больше B
+                else
+                {
+                    Max = b;
+                };
             //Вывод результата
             Console.WriteLine("Максимальное = " + Max);
             //Завершение программы
+            
+        }
+            else
+            {
+                Console.WriteLine("неверное значение!Нужно ввести целое число");
+            };
             Console.ReadKey();
         }
-    }
 }
