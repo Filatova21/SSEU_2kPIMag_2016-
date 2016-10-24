@@ -11,11 +11,10 @@ namespace Maximum
         static void Main(string[] args)
         {
             int a, b, c;
-            int max;
+            //int max;
             if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b) && int.TryParse(Console.ReadLine(), out c))
             {
-                max = (a >= b) ? a : b;
-                max = (max >= c) ? max : c;
+                int max = ((max=(a>=b)?a:b)>=c)?max:c;
                 Console.WriteLine("Максимальное  " + max);
                 Console.ReadKey();
             }
