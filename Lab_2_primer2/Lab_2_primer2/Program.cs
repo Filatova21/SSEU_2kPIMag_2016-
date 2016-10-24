@@ -10,37 +10,22 @@ namespace Maximum
     {
         static void Main(string[] args)
         {
-            //ввод исходных значений
-            int a;
-            int b;
-            if (int.TryParse(Console.ReadLine(), out a))
+            int a, b, c;
+            int max;
+            if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b) && int.TryParse(Console.ReadLine(), out c))
             {
-                if (int.TryParse(Console.ReadLine(), out b))
-                {
-                    //максимальное значение
-                    int max;
-                    if (a >= b)
-                    {
-                        max = a;
-                    }
-                    //иначе больше B
-                    else
-                    {
-                        max = b;
-                    };
-                    //Вывод результата
-                    Console.WriteLine("Максимальное = " + max);
-                }
-                else
+                max = (a >= b) ? a : b;
+                max = (max >= c) ? max : c;
+                Console.WriteLine("Максимальное  " + max);
+                Console.ReadKey();
+            }
+            else
                 {
                     Console.WriteLine("Неверное значение!Нужно ввести целое число");
                 };
-            }
-            else
-            {
-                Console.WriteLine("Неверное значение!Нужно ввести целое число");
-            };
+           
             Console.ReadKey();
+
         }
     }
 }
