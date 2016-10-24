@@ -12,7 +12,6 @@ namespace Maximum
         {
             //ввод исходных значений
             int a, b;
-            int Max;//максимальное значение
             int.TryParse(Console.ReadLine(), out a);
             int.TryParse(Console.ReadLine(), out b);
             //если больше А
@@ -30,15 +29,45 @@ namespace Maximum
                 {
                     Max = b;
                 };
-            //Вывод результата
-            Console.WriteLine("Максимальное = " + Max);
-            //Завершение программы
-            
-        }
+                //Вывод результата
+                Console.WriteLine("Максимальное = " + Max);
+                //Завершение программы
+
+            }
             else
             {
-                Console.WriteLine("неверное значение!Нужно ввести целое число");
+                Console.WriteLine("Неверное значение!Нужно ввести целое число");
+            };
+
+            //Проверка для B
+            if (int.TryParse(Console.ReadLine(), out a))
+            {
+                if(int.TryParse(Console.ReadLine(), out b))
+                {
+                    //максимальное значение
+                    int max;
+                    if (a >= b)
+                    {
+                        Max = a;
+                    }
+                    //иначе больше B
+                    else
+                    {
+                        Max = b;
+                    };
+                    //Вывод результата
+                    Console.WriteLine("Максимальное = " + Max);
+                }
+                else
+                {
+                    Console.WriteLine("Неверное значение!Нужно ввести целое число");
+                };
+            }
+            else
+            {
+                Console.WriteLine("Неверное значение!Нужно ввести целое число");
             };
             Console.ReadKey();
         }
+    }
 }
