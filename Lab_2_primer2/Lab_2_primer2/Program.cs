@@ -10,37 +10,49 @@ namespace Maximum
     {
         static void Main(string[] args)
         {
-            //ввод исходных значений
-            int a;
-            int b;
-            if (int.TryParse(Console.ReadLine(), out a))
-            {
-                if (int.TryParse(Console.ReadLine(), out b))
+            int a, b, c;
+            int max;
+            if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b) && int.TryParse(Console.ReadLine(), out c)) {
+                //Если а>=b
+                if (a >= b)
                 {
-                    //максимальное значение
-                    int max;
-                    if (a >= b)
+                    //и если а>=с
+                    if (a >= c)
                     {
+                        //то максимальное-а
                         max = a;
                     }
-                    //иначе больше B
+                    //иначе с>a
                     else
                     {
-                        max = b;
-                    };
-                    //Вывод результата
-                    Console.WriteLine("Максимальное = " + max);
+                        //максимальное с
+                        max = c;
+                    }
                 }
+                //иначе больше b
                 else
+                {
+                    //и если b>=c
+                    if (b >= c)
+                    {
+                        //то максимальное B
+                        max = b;
+                    }
+                    else
+                    {
+                        max = c;
+                    };
+                };
+                //Вывод результата
+                Console.WriteLine("Максимальное = " + max);
+            }
+            else
                 {
                     Console.WriteLine("Неверное значение!Нужно ввести целое число");
                 };
-            }
-            else
-            {
-                Console.WriteLine("Неверное значение!Нужно ввести целое число");
-            };
+           
             Console.ReadKey();
+
         }
     }
 }
