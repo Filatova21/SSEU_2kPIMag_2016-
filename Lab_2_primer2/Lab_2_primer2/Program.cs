@@ -12,36 +12,21 @@ namespace Maximum
         {
             int a, b, c;
             int max;
-            if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b) && int.TryParse(Console.ReadLine(), out c)) {
-                //Если а>=b
-                if (a >= b)
+            if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b) && int.TryParse(Console.ReadLine(), out c))
+            {
+                //если а больше остальных
+                if ((a >= b) && (a >= c))
                 {
-                    //и если а>=с
-                    if (a >= c)
-                    {
-                        //то максимальное-а
-                        max = a;
-                    }
-                    //иначе с>a
-                    else
-                    {
-                        //максимальное с
-                        max = c;
-                    }
+                    max = a;
                 }
-                //иначе больше b
+                //иначе,если b больше остальных
+                else if ((b >= a) && (b >= c))
+                {
+                    max = b;
+                }
                 else
                 {
-                    //и если b>=c
-                    if (b >= c)
-                    {
-                        //то максимальное B
-                        max = b;
-                    }
-                    else
-                    {
-                        max = c;
-                    };
+                    max = c;
                 };
                 //Вывод результата
                 Console.WriteLine("Максимальное = " + max);
