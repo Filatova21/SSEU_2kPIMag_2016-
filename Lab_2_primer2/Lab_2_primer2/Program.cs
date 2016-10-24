@@ -11,63 +11,16 @@ namespace Maximum
         static void Main(string[] args)
         {
             //ввод исходных значений
-            int a, b;
+            int a;
             int.TryParse(Console.ReadLine(), out a);
+            int b;
             int.TryParse(Console.ReadLine(), out b);
-            //если больше А
-            if (int.TryParse(Console.ReadLine(), out a))
-            {
-                int.TryParse(Console.ReadLine(), out b);
-                //максимальное значение
-                int max;
-                if (a >= b)
-                {
-                    Max = a;
-                }
-                //иначе больше B
-                else
-                {
-                    Max = b;
-                };
-                //Вывод результата
-                Console.WriteLine("Максимальное = " + Max);
-                //Завершение программы
-
-            }
-            else
-            {
-                Console.WriteLine("Неверное значение!Нужно ввести целое число");
-            };
-
-            //Проверка для B
-            if (int.TryParse(Console.ReadLine(), out a))
-            {
-                if(int.TryParse(Console.ReadLine(), out b))
-                {
-                    //максимальное значение
-                    int max;
-                    if (a >= b)
-                    {
-                        Max = a;
-                    }
-                    //иначе больше B
-                    else
-                    {
-                        Max = b;
-                    };
-                    //Вывод результата
-                    Console.WriteLine("Максимальное = " + Max);
-                }
-                else
-                {
-                    Console.WriteLine("Неверное значение!Нужно ввести целое число");
-                };
-            }
-            else
-            {
-                Console.WriteLine("Неверное значение!Нужно ввести целое число");
-            };
+            //максимальное значение
+            int max = (a >= b) ? a : b;
+            //вывод результата
+            Console.WriteLine("Максимальное  " + max);
             Console.ReadKey();
         }
-    }
-}
+     }
+  }
+  
