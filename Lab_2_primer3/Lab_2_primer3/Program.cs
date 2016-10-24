@@ -10,25 +10,34 @@ namespace Months
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите номер месяца");
+            Console.WriteLine("Введите сумму для перевода");
+            int sum;
+            int.TryParse(Console.ReadLine(), out sum);
+            //Console.WriteLine("В какой валюте указана сумма");
+
+            Console.WriteLine("В какую валюту перевести:1-доллары,2-евро,3-фунты,4-йены");
             int m;
+            double itog;
             if(int.TryParse(Console.ReadLine(), out m))
             {
-                switch(m)
+                switch (m)
                 {
-                    case 1:Console.WriteLine("Январь");break;
-                    case 2: Console.WriteLine("Февраль"); break;
-                    case 3: Console.WriteLine("Март"); break;
-                    case 4: Console.WriteLine("Апрель"); break;
-                    case 5: Console.WriteLine("Май"); break;
-                    case 6: Console.WriteLine("Июнь"); break;
-                    case 7: Console.WriteLine("Июль"); break;
-                    case 8: Console.WriteLine("Август"); break;
-                    case 9: Console.WriteLine("Сентябрь"); break;
-                    case 10: Console.WriteLine("Октябрь"); break;
-                    case 11: Console.WriteLine("Ноябрь"); break;
-                    case 12: Console.WriteLine("Декабрь"); break;
-                    default:Console.WriteLine("Такого месяца не существует");break;
+                    case 1://доллары
+                        itog = sum / 64;
+                        Console.WriteLine("Итого "+itog+" долларов");break;
+
+                    case 2: //евро
+                        itog = sum / 78;
+                        Console.WriteLine("Итого " + itog + " евро"); break;
+
+                    case 3: //фунты
+                        itog = sum /76;
+                        Console.WriteLine("Итого " + itog + " фунтов"); break;
+
+                    case 4: //йены
+                        itog = sum*6/10;
+                        Console.WriteLine("Итого " + itog + " йен"); break;
+                    default:Console.WriteLine("Вы ввели несоответствующее значение");break;
                 };
                 Console.ReadKey();
             }
