@@ -14,22 +14,19 @@ namespace Maximum
             int max;
             if (int.TryParse(Console.ReadLine(), out a) && int.TryParse(Console.ReadLine(), out b) && int.TryParse(Console.ReadLine(), out c))
             {
-                //если а больше остальных
-                if ((a >= b) && (a >= c))
+                if (a >= b)
                 {
                     max = a;
                 }
-                //иначе,если b больше остальных
-                else if ((b >= a) && (b >= c))
-                {
-                    max = b;
-                }
                 else
                 {
-                    max = c;
+                    max = b;
                 };
-                //Вывод результата
-                Console.WriteLine("Максимальное = " + max);
+                if (c >= max)
+                {
+                    max = c;
+                }
+                Console.WriteLine("Максимальное " + max);
             }
             else
                 {
