@@ -21,32 +21,30 @@ namespace ConsoleCalc
                 operation = Console.ReadLine();
                 switch (operation)
                 {
+                    //операции с двумя операндами
                     case "+":
-                        Console.WriteLine("Введите второе число");
-                        if (double.TryParse(Console.ReadLine(), out operand2)){
-                            result = operand1 + operand2;
-                        }; break;
                     case "-":
-                        Console.WriteLine("Введите второе число");
-                        if (double.TryParse(Console.ReadLine(), out operand2))
-                        {
-                            result = operand1 - operand2;
-                        };
-                        break;
                     case "*":
-                        Console.WriteLine("Введите второе число");
-                        if (double.TryParse(Console.ReadLine(), out operand2))
+                    case "/":
+                        //считываем второй операнд
+                        if(double.TryParse(Console.ReadLine(), out operand2))
                         {
-                            result = operand1 * operand2;
+                            //какая именно операция
+                            switch(operation){
+                                case "+": result = operand1 + operand2;break;
+                                case "-": result = operand1 - operand2; break;
+                                case "*": result = operand1 * operand2; break;
+                                case "/": result = operand1 / operand2; break;
+                            };
+                        }
+                        else
+                        {
+                            Console.WriteLine("Операнд должен быть числом!");
                         };
                         break;
-                    case "/":
-                        Console.WriteLine("Введите второе число");
-                        if (double.TryParse(Console.ReadLine(), out operand2))
-                        {
-                            result = operand1 / operand2;
-                        };break;
+                    //операция с одним операндом
                     case "sqrt":result = Math.Sqrt(operand1); break;
+                        //недопустимые операции
                     default:Console.WriteLine("неверная операция");
                         Console.ReadKey();
                         return;
@@ -54,7 +52,6 @@ namespace ConsoleCalc
                 //выводим результат
                 Console.WriteLine("Результат = "+result);
                 Console.ReadKey();
-
             }
             else
             {
