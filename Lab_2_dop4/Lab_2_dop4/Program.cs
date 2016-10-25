@@ -11,50 +11,12 @@ namespace Lab_2_dop4
         static void Main(string[] args)
         {
             Console.WriteLine("Введите стороны треугольника");
-            float a, b, c;
-            if (float.TryParse(Console.ReadLine(), out a) && float.TryParse(Console.ReadLine(), out b) && float.TryParse(Console.ReadLine(), out c))
+            double a, b, c;
+            if (double.TryParse(Console.ReadLine(), out a) && double.TryParse(Console.ReadLine(), out b) && double.TryParse(Console.ReadLine(), out c))
             {
-                if (((a + b) > c) && ((a + c) > b) && ((b + c) > a))
+                if (((a + b) > c) && ((a + c) > b) && ((b + c) > a))//если треугольник невырожденный
                 {
-                    /*проверка равносторонний ли треугольник
-                    if (a == b && a == c && b == c)
-                    {
-                        Console.WriteLine("Треугольник равносторонний");
-                    }
-                    else
-                    {
-                        // проверка равнобедренный ли треугольник
-                    if (a == b || a == c || b == c)
-                        {
-                        Console.WriteLine("Треугольник равнобедренный ");
-                        }
-                    };
-                    */
-
-                    // Является ли треугольник остроугольным, прямоугольным или тупоугольным
-                     if (((a * a + b * b) > c * c) || ((a * a + c * c) > b * b) || ((b * b + c * c) > a * a))
-                     {
-                         Console.WriteLine("Треугольник остроугольный");
-                     }
-                     else
-                     {
-                         if (((a * a + b * b) == c * c) || ((a * a + c * c) == b * b) || ((b * b + c * c) > a * a))
-                         {
-                             Console.WriteLine("Треугольник прямоугольный");
-                         }
-                         else
-                         {
-                             Console.WriteLine("Треугольник тупоугольный");
-                         };
-                     };
-                 }
-                 else
-                 {
-                     Console.WriteLine("треугольник вырожденный ");
-                 }
-                 Console.ReadKey();
-                 
-                 /*Подсчет периметра и площади
+                    //Подсчет периметра и площади
                     double P, S;
                     P = (a + b + c) / 2;
                     S = Math.Sqrt(P * (P - a) * (P - b) * (P - c));
@@ -63,20 +25,23 @@ namespace Lab_2_dop4
                     {
                         Console.WriteLine("Треугольник большой");
                     }
-                    else
-                    {
-                        if (P < 3 || S < 1)
+                    else if (P < 3 || S < 1)
                         {
                             Console.WriteLine("Треугольник маленький");
-                        }
-                    }*/
-                }
+                        };
+                    }
+               
+            }
             else
             {
                 Console.WriteLine("Неверное значение!Нужно ввести целое число");
-            }
+            };
                 Console.ReadKey();
             }
         }
     }
+
+
+    
+
 
