@@ -17,7 +17,9 @@ namespace Lab_3_primer_1
             if (int.TryParse(Console.ReadLine(),out N))
             {
                 int Sum = 0;//сумма чисел
-                for(int i = 0; i < N; i++)
+                int i = 0;//счетчик
+                //N раз
+                while(i < N)
                 {
                     Console.WriteLine("Введите число");
                     //если введено корректное число
@@ -25,11 +27,12 @@ namespace Lab_3_primer_1
                     {
                         Sum += x;//добавить к сумме
                         //Console.WriteLine("{" + Sum + "}");
+                        i++;
                     }
                     else
                     {
                         Console.WriteLine("Неверное значение! Введите целое значение!");
-                        i--;
+
                     };
                 };
                 //вывод результата
