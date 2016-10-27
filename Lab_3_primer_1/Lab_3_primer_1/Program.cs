@@ -19,11 +19,11 @@ namespace Lab_3_primer_1
                 int Sum = 0;//сумма чисел
                 int i = 0;//счетчик
                 //N раз
-                while(i < N)
+                do
                 {
                     Console.WriteLine("Введите число");
                     //если введено корректное число
-                    if(int.TryParse(Console.ReadLine(),out x))
+                    if (int.TryParse(Console.ReadLine(), out x))
                     {
                         Sum += x;//добавить к сумме
                         //Console.WriteLine("{" + Sum + "}");
@@ -34,7 +34,8 @@ namespace Lab_3_primer_1
                         Console.WriteLine("Неверное значение! Введите целое значение!");
 
                     };
-                };
+                }
+                while (i < N);
                 //вывод результата
                 Console.WriteLine("Сумма " + Sum);
             };
