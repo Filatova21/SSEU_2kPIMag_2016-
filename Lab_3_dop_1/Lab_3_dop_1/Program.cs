@@ -19,7 +19,6 @@ namespace Lab_3_dop_1
                 for (int i=1; i <= N;i++)
                 {
                     result = result*i;
-                    i++;
                 }
                 //вывод результата
                 Console.WriteLine("Факториал числа " +N+" = "+ result);
