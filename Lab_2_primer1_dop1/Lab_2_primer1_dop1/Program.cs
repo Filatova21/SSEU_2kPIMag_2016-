@@ -12,7 +12,7 @@ namespace Lab_2_primer1_dop1
             int razn = 32;// разница Цельсия и Фаренгейта
             int.TryParse(Console.ReadLine(), out a);
             int itog;//переменная,выводящая итоговое значение градусов по Фаренгейту
-            itog = a + razn;
+            itog = a*1.8 + razn;
             Console.WriteLine('Значение по Фаренгейту'+'='+itog);
             Console.ReadKey();
 
