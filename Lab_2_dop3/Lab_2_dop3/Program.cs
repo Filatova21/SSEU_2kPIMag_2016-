@@ -16,7 +16,7 @@ namespace Lab_2_dop3
             double itog;
             if (sum > 1000)
             {
-                itog = sum - (sum * 15 / 1000);
+                itog = sum - (sum * 15 / 100);
                 Console.WriteLine("Сумма с учетом скидки составляет " + itog);
                 Console.ReadKey();
             }
