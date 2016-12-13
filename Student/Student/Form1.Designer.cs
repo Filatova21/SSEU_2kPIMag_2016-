@@ -57,6 +57,7 @@
             this.checkBoxEkz3neyavka = new System.Windows.Forms.CheckBox();
             this.checkBoxEkz4neyavka = new System.Windows.Forms.CheckBox();
             this.checkBoxEkz5neyavka = new System.Windows.Forms.CheckBox();
+            this.buttonNaSledKurs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKurs)).BeginInit();
             this.groupBoxOzenki.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).BeginInit();
@@ -189,7 +190,7 @@
             this.textBoxStudentInfo.Multiline = true;
             this.textBoxStudentInfo.Name = "textBoxStudentInfo";
             this.textBoxStudentInfo.ReadOnly = true;
-            this.textBoxStudentInfo.Size = new System.Drawing.Size(489, 179);
+            this.textBoxStudentInfo.Size = new System.Drawing.Size(489, 141);
             this.textBoxStudentInfo.TabIndex = 11;
             // 
             // comboBoxSemestr
@@ -403,11 +404,22 @@
             this.checkBoxEkz5neyavka.Text = "неявка";
             this.checkBoxEkz5neyavka.UseVisualStyleBackColor = true;
             // 
+            // buttonNaSledKurs
+            // 
+            this.buttonNaSledKurs.Location = new System.Drawing.Point(13, 557);
+            this.buttonNaSledKurs.Name = "buttonNaSledKurs";
+            this.buttonNaSledKurs.Size = new System.Drawing.Size(104, 38);
+            this.buttonNaSledKurs.TabIndex = 14;
+            this.buttonNaSledKurs.Text = "Перевести на след.курс";
+            this.buttonNaSledKurs.UseVisualStyleBackColor = true;
+            this.buttonNaSledKurs.Click += new System.EventHandler(this.buttonNaSledKurs_Click);
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 592);
+            this.Controls.Add(this.buttonNaSledKurs);
             this.Controls.Add(this.groupBoxOzenki);
             this.Controls.Add(this.comboBoxSemestr);
             this.Controls.Add(this.textBoxStudentInfo);
@@ -468,6 +480,7 @@
         private System.Windows.Forms.CheckBox checkBoxEkz3;
         private System.Windows.Forms.CheckBox checkBoxEkz2;
         private System.Windows.Forms.CheckBox checkBoxEkz1;
+        private System.Windows.Forms.Button buttonNaSledKurs;
     }
 }
 
