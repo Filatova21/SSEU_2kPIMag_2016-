@@ -246,6 +246,7 @@
             this.checkBoxEkz5neyavka.TabIndex = 19;
             this.checkBoxEkz5neyavka.Text = "неявка";
             this.checkBoxEkz5neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz5neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz5neyavka_CheckedChanged_1);
             // 
             // checkBoxEkz4neyavka
             // 
@@ -256,6 +257,7 @@
             this.checkBoxEkz4neyavka.TabIndex = 18;
             this.checkBoxEkz4neyavka.Text = "неявка";
             this.checkBoxEkz4neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz4neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz4neyavka_CheckedChanged_1);
             // 
             // checkBoxEkz3neyavka
             // 
@@ -266,6 +268,7 @@
             this.checkBoxEkz3neyavka.TabIndex = 17;
             this.checkBoxEkz3neyavka.Text = "неявка";
             this.checkBoxEkz3neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz3neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz3neyavka_CheckedChanged_1);
             // 
             // checkBoxEkz2neyavka
             // 
@@ -276,6 +279,7 @@
             this.checkBoxEkz2neyavka.TabIndex = 16;
             this.checkBoxEkz2neyavka.Text = "неявка";
             this.checkBoxEkz2neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz2neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz2neyavka_CheckedChanged_1);
             // 
             // checkBoxEkz1neyavka
             // 
@@ -299,6 +303,7 @@
             this.checkBoxEkz5.TabIndex = 14;
             this.checkBoxEkz5.Text = "Экзамен 5";
             this.checkBoxEkz5.UseVisualStyleBackColor = true;
+            this.checkBoxEkz5.CheckedChanged += new System.EventHandler(this.checkBoxEkz5_CheckedChanged_1);
             // 
             // checkBoxEkz4
             // 
@@ -311,6 +316,7 @@
             this.checkBoxEkz4.TabIndex = 13;
             this.checkBoxEkz4.Text = "Экзамен 4";
             this.checkBoxEkz4.UseVisualStyleBackColor = true;
+            this.checkBoxEkz4.CheckedChanged += new System.EventHandler(this.checkBoxEkz4_CheckedChanged_1);
             // 
             // checkBoxEkz3
             // 
@@ -323,6 +329,7 @@
             this.checkBoxEkz3.TabIndex = 12;
             this.checkBoxEkz3.Text = "Экзамен 3";
             this.checkBoxEkz3.UseVisualStyleBackColor = true;
+            this.checkBoxEkz3.CheckedChanged += new System.EventHandler(this.checkBoxEkz3_CheckedChanged_1);
             // 
             // checkBoxEkz2
             // 
@@ -335,6 +342,7 @@
             this.checkBoxEkz2.TabIndex = 11;
             this.checkBoxEkz2.Text = "Экзамен 2";
             this.checkBoxEkz2.UseVisualStyleBackColor = true;
+            this.checkBoxEkz2.CheckedChanged += new System.EventHandler(this.checkBoxEkz2_CheckedChanged_1);
             // 
             // checkBoxEkz1
             // 
