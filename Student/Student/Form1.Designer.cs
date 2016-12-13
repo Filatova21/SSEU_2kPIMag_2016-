@@ -42,29 +42,35 @@
             this.textBoxStudentInfo = new System.Windows.Forms.TextBox();
             this.comboBoxSemestr = new System.Windows.Forms.ComboBox();
             this.groupBoxOzenki = new System.Windows.Forms.GroupBox();
-            this.numericUpDownEkz1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownEkz2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownEkz3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownEkz4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownEkz5 = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxEkz1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz3 = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz4 = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz5 = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz1neyavka = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz2neyavka = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz3neyavka = new System.Windows.Forms.CheckBox();
-            this.checkBoxEkz4neyavka = new System.Windows.Forms.CheckBox();
             this.checkBoxEkz5neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz4neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz3neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz2neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz1neyavka = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz5 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxEkz1 = new System.Windows.Forms.CheckBox();
+            this.numericUpDownEkz5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownEkz1 = new System.Windows.Forms.NumericUpDown();
             this.buttonNaSledKurs = new System.Windows.Forms.Button();
+            this.labelStoimost = new System.Windows.Forms.Label();
+            this.numericUpDownStoimost = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSum = new System.Windows.Forms.NumericUpDown();
+            this.buttonOplatit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKurs)).BeginInit();
             this.groupBoxOzenki.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStoimost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSum)).BeginInit();
             this.SuspendLayout();
             // 
             // labelFIO
@@ -200,7 +206,7 @@
             this.comboBoxSemestr.Items.AddRange(new object[] {
             "1 семестр",
             "2 семестр"});
-            this.comboBoxSemestr.Location = new System.Drawing.Point(33, 219);
+            this.comboBoxSemestr.Location = new System.Drawing.Point(3, 14);
             this.comboBoxSemestr.Name = "comboBoxSemestr";
             this.comboBoxSemestr.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSemestr.TabIndex = 12;
@@ -214,6 +220,7 @@
             this.groupBoxOzenki.Controls.Add(this.checkBoxEkz2neyavka);
             this.groupBoxOzenki.Controls.Add(this.checkBoxEkz1neyavka);
             this.groupBoxOzenki.Controls.Add(this.checkBoxEkz5);
+            this.groupBoxOzenki.Controls.Add(this.comboBoxSemestr);
             this.groupBoxOzenki.Controls.Add(this.checkBoxEkz4);
             this.groupBoxOzenki.Controls.Add(this.checkBoxEkz3);
             this.groupBoxOzenki.Controls.Add(this.checkBoxEkz2);
@@ -223,29 +230,164 @@
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz3);
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz2);
             this.groupBoxOzenki.Controls.Add(this.numericUpDownEkz1);
-            this.groupBoxOzenki.Location = new System.Drawing.Point(30, 271);
+            this.groupBoxOzenki.Location = new System.Drawing.Point(30, 238);
             this.groupBoxOzenki.Name = "groupBoxOzenki";
-            this.groupBoxOzenki.Size = new System.Drawing.Size(434, 100);
+            this.groupBoxOzenki.Size = new System.Drawing.Size(434, 133);
             this.groupBoxOzenki.TabIndex = 13;
             this.groupBoxOzenki.TabStop = false;
-            this.groupBoxOzenki.Text = "groupBox1";
+            this.groupBoxOzenki.Text = "Оценки за экзамены";
             // 
-            // numericUpDownEkz1
+            // checkBoxEkz5neyavka
             // 
-            this.numericUpDownEkz1.Location = new System.Drawing.Point(6, 46);
-            this.numericUpDownEkz1.Maximum = new decimal(new int[] {
+            this.checkBoxEkz5neyavka.AutoSize = true;
+            this.checkBoxEkz5neyavka.Location = new System.Drawing.Point(343, 100);
+            this.checkBoxEkz5neyavka.Name = "checkBoxEkz5neyavka";
+            this.checkBoxEkz5neyavka.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxEkz5neyavka.TabIndex = 19;
+            this.checkBoxEkz5neyavka.Text = "неявка";
+            this.checkBoxEkz5neyavka.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz4neyavka
+            // 
+            this.checkBoxEkz4neyavka.AutoSize = true;
+            this.checkBoxEkz4neyavka.Location = new System.Drawing.Point(263, 100);
+            this.checkBoxEkz4neyavka.Name = "checkBoxEkz4neyavka";
+            this.checkBoxEkz4neyavka.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxEkz4neyavka.TabIndex = 18;
+            this.checkBoxEkz4neyavka.Text = "неявка";
+            this.checkBoxEkz4neyavka.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz3neyavka
+            // 
+            this.checkBoxEkz3neyavka.AutoSize = true;
+            this.checkBoxEkz3neyavka.Location = new System.Drawing.Point(177, 100);
+            this.checkBoxEkz3neyavka.Name = "checkBoxEkz3neyavka";
+            this.checkBoxEkz3neyavka.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxEkz3neyavka.TabIndex = 17;
+            this.checkBoxEkz3neyavka.Text = "неявка";
+            this.checkBoxEkz3neyavka.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz2neyavka
+            // 
+            this.checkBoxEkz2neyavka.AutoSize = true;
+            this.checkBoxEkz2neyavka.Location = new System.Drawing.Point(93, 100);
+            this.checkBoxEkz2neyavka.Name = "checkBoxEkz2neyavka";
+            this.checkBoxEkz2neyavka.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxEkz2neyavka.TabIndex = 16;
+            this.checkBoxEkz2neyavka.Text = "неявка";
+            this.checkBoxEkz2neyavka.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz1neyavka
+            // 
+            this.checkBoxEkz1neyavka.AutoSize = true;
+            this.checkBoxEkz1neyavka.Location = new System.Drawing.Point(6, 100);
+            this.checkBoxEkz1neyavka.Name = "checkBoxEkz1neyavka";
+            this.checkBoxEkz1neyavka.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxEkz1neyavka.TabIndex = 15;
+            this.checkBoxEkz1neyavka.Text = "неявка";
+            this.checkBoxEkz1neyavka.UseVisualStyleBackColor = true;
+            this.checkBoxEkz1neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz1neyavka_CheckedChanged);
+            // 
+            // checkBoxEkz5
+            // 
+            this.checkBoxEkz5.AutoSize = true;
+            this.checkBoxEkz5.Checked = true;
+            this.checkBoxEkz5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz5.Location = new System.Drawing.Point(354, 41);
+            this.checkBoxEkz5.Name = "checkBoxEkz5";
+            this.checkBoxEkz5.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxEkz5.TabIndex = 14;
+            this.checkBoxEkz5.Text = "Экзамен 5";
+            this.checkBoxEkz5.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz4
+            // 
+            this.checkBoxEkz4.AutoSize = true;
+            this.checkBoxEkz4.Checked = true;
+            this.checkBoxEkz4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz4.Location = new System.Drawing.Point(263, 41);
+            this.checkBoxEkz4.Name = "checkBoxEkz4";
+            this.checkBoxEkz4.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxEkz4.TabIndex = 13;
+            this.checkBoxEkz4.Text = "Экзамен 4";
+            this.checkBoxEkz4.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz3
+            // 
+            this.checkBoxEkz3.AutoSize = true;
+            this.checkBoxEkz3.Checked = true;
+            this.checkBoxEkz3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz3.Location = new System.Drawing.Point(177, 41);
+            this.checkBoxEkz3.Name = "checkBoxEkz3";
+            this.checkBoxEkz3.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxEkz3.TabIndex = 12;
+            this.checkBoxEkz3.Text = "Экзамен 3";
+            this.checkBoxEkz3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz2
+            // 
+            this.checkBoxEkz2.AutoSize = true;
+            this.checkBoxEkz2.Checked = true;
+            this.checkBoxEkz2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz2.Location = new System.Drawing.Point(93, 41);
+            this.checkBoxEkz2.Name = "checkBoxEkz2";
+            this.checkBoxEkz2.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxEkz2.TabIndex = 11;
+            this.checkBoxEkz2.Text = "Экзамен 2";
+            this.checkBoxEkz2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEkz1
+            // 
+            this.checkBoxEkz1.AutoSize = true;
+            this.checkBoxEkz1.Checked = true;
+            this.checkBoxEkz1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEkz1.Location = new System.Drawing.Point(7, 41);
+            this.checkBoxEkz1.Name = "checkBoxEkz1";
+            this.checkBoxEkz1.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxEkz1.TabIndex = 10;
+            this.checkBoxEkz1.Text = "Экзамен 1";
+            this.checkBoxEkz1.UseVisualStyleBackColor = true;
+            this.checkBoxEkz1.CheckedChanged += new System.EventHandler(this.checkBoxEkz1_CheckedChanged);
+            // 
+            // numericUpDownEkz5
+            // 
+            this.numericUpDownEkz5.Location = new System.Drawing.Point(348, 64);
+            this.numericUpDownEkz5.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDownEkz1.Name = "numericUpDownEkz1";
-            this.numericUpDownEkz1.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDownEkz1.TabIndex = 5;
-            this.numericUpDownEkz1.ValueChanged += new System.EventHandler(this.numericUpDownEkz1_ValueChanged);
+            this.numericUpDownEkz5.Name = "numericUpDownEkz5";
+            this.numericUpDownEkz5.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDownEkz5.TabIndex = 9;
+            // 
+            // numericUpDownEkz4
+            // 
+            this.numericUpDownEkz4.Location = new System.Drawing.Point(277, 64);
+            this.numericUpDownEkz4.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownEkz4.Name = "numericUpDownEkz4";
+            this.numericUpDownEkz4.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDownEkz4.TabIndex = 8;
+            // 
+            // numericUpDownEkz3
+            // 
+            this.numericUpDownEkz3.Location = new System.Drawing.Point(186, 64);
+            this.numericUpDownEkz3.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownEkz3.Name = "numericUpDownEkz3";
+            this.numericUpDownEkz3.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDownEkz3.TabIndex = 7;
             // 
             // numericUpDownEkz2
             // 
-            this.numericUpDownEkz2.Location = new System.Drawing.Point(105, 46);
+            this.numericUpDownEkz2.Location = new System.Drawing.Point(105, 64);
             this.numericUpDownEkz2.Maximum = new decimal(new int[] {
             5,
             0,
@@ -256,153 +398,18 @@
             this.numericUpDownEkz2.TabIndex = 6;
             this.numericUpDownEkz2.ValueChanged += new System.EventHandler(this.numericUpDownEkz2_ValueChanged);
             // 
-            // numericUpDownEkz3
+            // numericUpDownEkz1
             // 
-            this.numericUpDownEkz3.Location = new System.Drawing.Point(187, 46);
-            this.numericUpDownEkz3.Maximum = new decimal(new int[] {
+            this.numericUpDownEkz1.Location = new System.Drawing.Point(7, 64);
+            this.numericUpDownEkz1.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDownEkz3.Name = "numericUpDownEkz3";
-            this.numericUpDownEkz3.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDownEkz3.TabIndex = 7;
-            // 
-            // numericUpDownEkz4
-            // 
-            this.numericUpDownEkz4.Location = new System.Drawing.Point(277, 46);
-            this.numericUpDownEkz4.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownEkz4.Name = "numericUpDownEkz4";
-            this.numericUpDownEkz4.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDownEkz4.TabIndex = 8;
-            // 
-            // numericUpDownEkz5
-            // 
-            this.numericUpDownEkz5.Location = new System.Drawing.Point(346, 46);
-            this.numericUpDownEkz5.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownEkz5.Name = "numericUpDownEkz5";
-            this.numericUpDownEkz5.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDownEkz5.TabIndex = 9;
-            // 
-            // checkBoxEkz1
-            // 
-            this.checkBoxEkz1.AutoSize = true;
-            this.checkBoxEkz1.Checked = true;
-            this.checkBoxEkz1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEkz1.Location = new System.Drawing.Point(7, 20);
-            this.checkBoxEkz1.Name = "checkBoxEkz1";
-            this.checkBoxEkz1.Size = new System.Drawing.Size(80, 17);
-            this.checkBoxEkz1.TabIndex = 10;
-            this.checkBoxEkz1.Text = "Экзамен 1";
-            this.checkBoxEkz1.UseVisualStyleBackColor = true;
-            this.checkBoxEkz1.CheckedChanged += new System.EventHandler(this.checkBoxEkz1_CheckedChanged);
-            // 
-            // checkBoxEkz2
-            // 
-            this.checkBoxEkz2.AutoSize = true;
-            this.checkBoxEkz2.Checked = true;
-            this.checkBoxEkz2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEkz2.Location = new System.Drawing.Point(93, 20);
-            this.checkBoxEkz2.Name = "checkBoxEkz2";
-            this.checkBoxEkz2.Size = new System.Drawing.Size(80, 17);
-            this.checkBoxEkz2.TabIndex = 11;
-            this.checkBoxEkz2.Text = "Экзамен 2";
-            this.checkBoxEkz2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEkz3
-            // 
-            this.checkBoxEkz3.AutoSize = true;
-            this.checkBoxEkz3.Checked = true;
-            this.checkBoxEkz3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEkz3.Location = new System.Drawing.Point(177, 23);
-            this.checkBoxEkz3.Name = "checkBoxEkz3";
-            this.checkBoxEkz3.Size = new System.Drawing.Size(80, 17);
-            this.checkBoxEkz3.TabIndex = 12;
-            this.checkBoxEkz3.Text = "Экзамен 3";
-            this.checkBoxEkz3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEkz4
-            // 
-            this.checkBoxEkz4.AutoSize = true;
-            this.checkBoxEkz4.Checked = true;
-            this.checkBoxEkz4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEkz4.Location = new System.Drawing.Point(263, 23);
-            this.checkBoxEkz4.Name = "checkBoxEkz4";
-            this.checkBoxEkz4.Size = new System.Drawing.Size(80, 17);
-            this.checkBoxEkz4.TabIndex = 13;
-            this.checkBoxEkz4.Text = "Экзамен 4";
-            this.checkBoxEkz4.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEkz5
-            // 
-            this.checkBoxEkz5.AutoSize = true;
-            this.checkBoxEkz5.Checked = true;
-            this.checkBoxEkz5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEkz5.Location = new System.Drawing.Point(348, 23);
-            this.checkBoxEkz5.Name = "checkBoxEkz5";
-            this.checkBoxEkz5.Size = new System.Drawing.Size(80, 17);
-            this.checkBoxEkz5.TabIndex = 14;
-            this.checkBoxEkz5.Text = "Экзамен 5";
-            this.checkBoxEkz5.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEkz1neyavka
-            // 
-            this.checkBoxEkz1neyavka.AutoSize = true;
-            this.checkBoxEkz1neyavka.Location = new System.Drawing.Point(7, 73);
-            this.checkBoxEkz1neyavka.Name = "checkBoxEkz1neyavka";
-            this.checkBoxEkz1neyavka.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxEkz1neyavka.TabIndex = 15;
-            this.checkBoxEkz1neyavka.Text = "неявка";
-            this.checkBoxEkz1neyavka.UseVisualStyleBackColor = true;
-            this.checkBoxEkz1neyavka.CheckedChanged += new System.EventHandler(this.checkBoxEkz1neyavka_CheckedChanged);
-            // 
-            // checkBoxEkz2neyavka
-            // 
-            this.checkBoxEkz2neyavka.AutoSize = true;
-            this.checkBoxEkz2neyavka.Location = new System.Drawing.Point(93, 72);
-            this.checkBoxEkz2neyavka.Name = "checkBoxEkz2neyavka";
-            this.checkBoxEkz2neyavka.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxEkz2neyavka.TabIndex = 16;
-            this.checkBoxEkz2neyavka.Text = "неявка";
-            this.checkBoxEkz2neyavka.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEkz3neyavka
-            // 
-            this.checkBoxEkz3neyavka.AutoSize = true;
-            this.checkBoxEkz3neyavka.Location = new System.Drawing.Point(177, 72);
-            this.checkBoxEkz3neyavka.Name = "checkBoxEkz3neyavka";
-            this.checkBoxEkz3neyavka.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxEkz3neyavka.TabIndex = 17;
-            this.checkBoxEkz3neyavka.Text = "неявка";
-            this.checkBoxEkz3neyavka.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEkz4neyavka
-            // 
-            this.checkBoxEkz4neyavka.AutoSize = true;
-            this.checkBoxEkz4neyavka.Location = new System.Drawing.Point(263, 72);
-            this.checkBoxEkz4neyavka.Name = "checkBoxEkz4neyavka";
-            this.checkBoxEkz4neyavka.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxEkz4neyavka.TabIndex = 18;
-            this.checkBoxEkz4neyavka.Text = "неявка";
-            this.checkBoxEkz4neyavka.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEkz5neyavka
-            // 
-            this.checkBoxEkz5neyavka.AutoSize = true;
-            this.checkBoxEkz5neyavka.Location = new System.Drawing.Point(346, 73);
-            this.checkBoxEkz5neyavka.Name = "checkBoxEkz5neyavka";
-            this.checkBoxEkz5neyavka.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxEkz5neyavka.TabIndex = 19;
-            this.checkBoxEkz5neyavka.Text = "неявка";
-            this.checkBoxEkz5neyavka.UseVisualStyleBackColor = true;
+            this.numericUpDownEkz1.Name = "numericUpDownEkz1";
+            this.numericUpDownEkz1.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDownEkz1.TabIndex = 5;
+            this.numericUpDownEkz1.ValueChanged += new System.EventHandler(this.numericUpDownEkz1_ValueChanged);
             // 
             // buttonNaSledKurs
             // 
@@ -414,14 +421,67 @@
             this.buttonNaSledKurs.UseVisualStyleBackColor = true;
             this.buttonNaSledKurs.Click += new System.EventHandler(this.buttonNaSledKurs_Click);
             // 
+            // labelStoimost
+            // 
+            this.labelStoimost.AutoSize = true;
+            this.labelStoimost.Location = new System.Drawing.Point(327, 139);
+            this.labelStoimost.Name = "labelStoimost";
+            this.labelStoimost.Size = new System.Drawing.Size(111, 13);
+            this.labelStoimost.TabIndex = 15;
+            this.labelStoimost.Text = "Стоимость обучения";
+            this.labelStoimost.Visible = false;
+            // 
+            // numericUpDownStoimost
+            // 
+            this.numericUpDownStoimost.DecimalPlaces = 2;
+            this.numericUpDownStoimost.Location = new System.Drawing.Point(452, 137);
+            this.numericUpDownStoimost.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDownStoimost.Name = "numericUpDownStoimost";
+            this.numericUpDownStoimost.Size = new System.Drawing.Size(65, 20);
+            this.numericUpDownStoimost.TabIndex = 16;
+            this.numericUpDownStoimost.Visible = false;
+            this.numericUpDownStoimost.ValueChanged += new System.EventHandler(this.numericUpDownStoimost_ValueChanged);
+            // 
+            // numericUpDownSum
+            // 
+            this.numericUpDownSum.DecimalPlaces = 2;
+            this.numericUpDownSum.Location = new System.Drawing.Point(452, 171);
+            this.numericUpDownSum.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDownSum.Name = "numericUpDownSum";
+            this.numericUpDownSum.Size = new System.Drawing.Size(67, 20);
+            this.numericUpDownSum.TabIndex = 17;
+            this.numericUpDownSum.Visible = false;
+            // 
+            // buttonOplatit
+            // 
+            this.buttonOplatit.Location = new System.Drawing.Point(363, 168);
+            this.buttonOplatit.Name = "buttonOplatit";
+            this.buttonOplatit.Size = new System.Drawing.Size(75, 23);
+            this.buttonOplatit.TabIndex = 18;
+            this.buttonOplatit.Text = "Оплатить";
+            this.buttonOplatit.UseVisualStyleBackColor = true;
+            this.buttonOplatit.Visible = false;
+            this.buttonOplatit.Click += new System.EventHandler(this.buttonOplatit_Click);
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 592);
+            this.Controls.Add(this.buttonOplatit);
+            this.Controls.Add(this.numericUpDownSum);
+            this.Controls.Add(this.numericUpDownStoimost);
+            this.Controls.Add(this.labelStoimost);
             this.Controls.Add(this.buttonNaSledKurs);
             this.Controls.Add(this.groupBoxOzenki);
-            this.Controls.Add(this.comboBoxSemestr);
             this.Controls.Add(this.textBoxStudentInfo);
             this.Controls.Add(this.radioButtonCommerce);
             this.Controls.Add(this.radioButtonBudget);
@@ -439,11 +499,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKurs)).EndInit();
             this.groupBoxOzenki.ResumeLayout(false);
             this.groupBoxOzenki.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEkz1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStoimost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,6 +543,10 @@
         private System.Windows.Forms.CheckBox checkBoxEkz2;
         private System.Windows.Forms.CheckBox checkBoxEkz1;
         private System.Windows.Forms.Button buttonNaSledKurs;
+        private System.Windows.Forms.Label labelStoimost;
+        private System.Windows.Forms.NumericUpDown numericUpDownStoimost;
+        private System.Windows.Forms.NumericUpDown numericUpDownSum;
+        private System.Windows.Forms.Button buttonOplatit;
     }
 }
 
