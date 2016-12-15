@@ -131,9 +131,9 @@ namespace Student
 
         }
         //переводим на след курс
-        public void PerevestiNaSledKurs()
+        public virtual void PerevestiNaSledKurs()
         {
-                kurs += 1;
+                Kurs += 1;
         }
         //находим среднюю оценку
         public double SredniyBall()
@@ -230,6 +230,16 @@ namespace Student
                    + "Обучение на бюджетной основе\r\n" //записи о бюджетном обучении
                    + stipendia; //и стипендии
         }
+        //перевести студента на след курс
+        public override void PerevestiNaSledKurs()
+        {
+            //если колво несданных экзаменов за последний семест меньше 3
+            if(KolvoNesdach(KolvoSemestrov())<3)
+            {
+                //то перевести на след.курс
+                base.PerevestiNaSledKurs();
+            };
+        }
     }
 
     class StudentPlat : Student
@@ -240,8 +250,20 @@ namespace Student
         //оплатить обучение
         public void OplatitObuchenie(decimal sum)
         {
-            //долг снижается на указ сумму
+            //вносим в опл сумму
             oplacheno += sum;
+        }
+        //оплатить обучение по числу семестров
+        public void OplatitObuchenie(int kolvoSemestrov)
+        {
+            //прибавляем в оплаченной сумме число семестров*стоимость за семестр
+            oplacheno += kolvoSemestrov * stoimostObucheniya;
+        }
+        //оплатить обучение полностью
+        public void OplatitObuchenie()
+        {
+            //выплатить весь долг
+            oplacheno += Dolg;
         }
         //задолженность за обучение (или переплата)
         public decimal Dolg
@@ -273,6 +295,16 @@ namespace Student
                    + "Обучение на платной основе\r\n" //записи о платном обучении
                    + "Стоимость обучения: " + stoimostObucheniya + " руб.\r\n"
                    + "Задолженность: " + Dolg + " руб."; //и стипендии
+        }
+        //перевести на след курс
+        public override void PerevestiNaSledKurs()
+        {
+            //если нет долга
+            if (Dolg==0)
+            {
+                //то перевести на след.курс
+                base.PerevestiNaSledKurs();
+            };
         }
 
 
